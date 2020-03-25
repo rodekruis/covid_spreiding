@@ -112,6 +112,9 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
             //     .title(function (d) {
             //         return '';
             //     });
+
+            var max_cases = veiligheidsregio.top(1)[0].value;
+            var factor = 3000000 / 677;
                 
             var bubbleOverlayChart = new dc.bubbleOverlay("#map")
                 .svg(d3.select("#map svg"));
@@ -124,7 +127,7 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
                 .radiusValueAccessor(function(d) {
                     return d.value*d.value;
                 })
-                .r(d3.scale.linear().domain([0, 3000000]))
+                .r(d3.scale.linear().domain([0, max_cases * factor]))
                 .colorCalculator(function() {
                     return "#a60000";
                 })
