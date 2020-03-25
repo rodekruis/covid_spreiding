@@ -61,9 +61,7 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
             dc.dataCount("#count-info")
                 .dimension(cf)
                 .group(all);
-            
-            console.log(veiligheidsregio.top(Infinity));
-            
+                        
             var date_chart = dc.rowChart("#dates");
             date_chart.width(500).height(300)
                     .dimension(cf.datum)
@@ -100,7 +98,7 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
             // THIS CODE WAS USED TO PRODUCED THE HARD-CODED SVG IN INDEX.HTML
             // var map_chart = dc.geoChoroplethChart("#map");
             // map_chart
-            //     .width(660).height(800)
+            //     .width(660).height(660)
             //     .dimension(cf.veiligheidsregio)
             //     .group(veiligheidsregio)
             //     .colors(d3.scale.quantile()
@@ -120,7 +118,7 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
             
             bubbleOverlayChart
                 .width(660)
-                .height(800)
+                .height(660)
                 .dimension(cf.veiligheidsregio)
                 .group(veiligheidsregio)
                 .radiusValueAccessor(function(d) {
@@ -136,29 +134,29 @@ d3.dsv(',')('data/map_gemeente_VR.csv', function(mapping_gemeente_VR){
                 .title(function(d) {
                     return nameLookup[d.key] + ' (' + d.key + ') : ' + d.value + ' gevallen';
                 })
-                .point('DAC01',605.029074985776,104.373029151741)
-                .point('DAC02',467.326770767702,127.409735846573)
-                .point('DAC03',586.086023017136,181.084517206379)
-                .point('DAC04',527.636906482752,249.596889456433)
-                .point('DAC05',599.677997236313,299.546833843589)
-                .point('DAC06',519.331207026812,334.914970668994)
-                .point('DAC07',460.966249567539,359.135488008)
-                .point('DAC08',410.50761280771,398.76118558307)
-                .point('DAC09-14',362.122407508479,344.633646607006)
-                .point('DAC10-11',320.6353464998,212.700445602315)
-                .point('DAC12',284.524098450637,287.046450896627)
-                .point('DAC13',317.963685562659,295.235850717989)
-                .point('DAC15',235.790050070713,358.359161952693)
-                .point('DAC16',283.302708872666,345.163913656368)
-                .point('DAC17',225.892479300152,397.80554790253)
-                .point('DAC18',284.057897395095,407.66181852413)
-                .point('DAC19',158.715067723556,485.70340981693)
-                .point('DAC20',298.498886726115,457.018389812325)
-                .point('DAC21',422.603250453714,439.073785624001)
-                .point('DAC22',416.904912986926,493.60364853546)
-                .point('DAC23',485.65751704495,508.82325444493)
-                .point('DAC24',470.019277481631,608.908100632476)
-                .point('DAC25',428.817693793678,253.607010168887) 
+                .point('DAC01',605.029074985776,102.773764995383)
+                .point('DAC02',467.326770767702,125.457489894085)
+                .point('DAC03',586.086023017136,178.309835087894)
+                .point('DAC04',527.636906482752,245.772420988956)
+                .point('DAC05',599.677997236313,294.957003325018)
+                .point('DAC06',519.331207026812,329.783209021647)
+                .point('DAC07',460.966249567539,353.632605530458)
+                .point('DAC08',410.50761280771,392.651135158814)
+                .point('DAC09-14',362.122407508479,339.352969763834)
+                .point('DAC10-11',320.6353464998,209.441325871312)
+                .point('DAC12',284.524098450637,282.648158503856)
+                .point('DAC13',317.963685562659,290.71207558602)
+                .point('DAC15',235.790050070713,352.868174793741)
+                .point('DAC16',283.302708872666,339.875111753569)
+                .point('DAC17',225.892479300152,391.710140313702)
+                .point('DAC18',284.057897395095,401.415387433841)
+                .point('DAC19',158.715067723556,478.261180150381)
+                .point('DAC20',298.498886726115,450.015688678104)
+                .point('DAC21',422.603250453714,432.346042134601)
+                .point('DAC22',416.904912986926,486.04036682403)
+                .point('DAC23',485.65751704495,501.026769094564)
+                .point('DAC24',470.019277481631,599.578057155043)
+                .point('DAC25',428.817693793678,249.721096303396)
             ;
                 
             dc.renderAll();
