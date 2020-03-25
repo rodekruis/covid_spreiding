@@ -1,5 +1,5 @@
 
-View dashboard at https://rodekruis.github.io/covid_spreiding_dynamisch/
+View dashboard at https://rodekruis.github.io/covid_spreiding/
 
 To run locally: 
 1. Download or pull this repository to a local folder. 
